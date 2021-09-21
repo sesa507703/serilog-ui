@@ -43,7 +43,7 @@ namespace Serilog.Ui.MySqlProvider
             DateTime? endDate)
         {
             var queryBuilder = new StringBuilder();
-            queryBuilder.Append("SELECT Id, Message, LogLevel AS `Level`, TimeStamp, Exception, Properties From `");
+            queryBuilder.Append("SELECT Id, Message, Level, TimeStamp, Exception, Properties From `");
             queryBuilder.Append(_options.TableName);
             queryBuilder.Append("` ");
 
